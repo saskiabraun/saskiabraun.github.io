@@ -6,6 +6,7 @@
   --graubeige: #d8d1c8;
   --kupfer: #a85f45;
   --blaugrau: #73808d;
+  --weiss: #ffffff;
 }
 
 /* Grundeinstellungen */
@@ -18,133 +19,236 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Gesamte Website */
-
 body {
   margin: 0;
-  padding: 80px 10%;
   background-color: var(--creme);
   color: var(--dunkelblau);
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Name */
-
-h1 {
-  margin: 0 0 25px;
-  max-width: 900px;
-  color: var(--dunkelblau);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 80px;
-  font-weight: normal;
-  line-height: 1;
-  letter-spacing: -2px;
-}
-
-/* Überschriften */
-
-h2 {
-  margin-top: 70px;
-  margin-bottom: 25px;
-  color: var(--kupfer);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 42px;
-  font-weight: normal;
-  line-height: 1.2;
-}
-
-/* Texte */
-
-p {
-  max-width: 800px;
-  margin-bottom: 24px;
-  font-size: 20px;
-  line-height: 1.7;
-}
-
-/* Der erste Text direkt unter dem Namen */
-
-h1 + p {
-  margin-top: 0;
-  margin-bottom: 15px;
-  color: var(--blaugrau);
-  font-size: 23px;
-  font-weight: bold;
-}
-
-/* Forschungsschwerpunkte unter der Position */
-
-h1 + p + p {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border-top: 1px solid var(--graubeige);
-  border-bottom: 1px solid var(--graubeige);
-  color: var(--kupfer);
-  font-size: 17px;
-  font-weight: bold;
-  letter-spacing: 0.5px;
-}
-
 /* Links */
 
 a {
-  color: var(--kupfer);
+  color: inherit;
   text-decoration: none;
-  border-bottom: 1px solid var(--kupfer);
 }
 
-a:hover {
+/* Kopfzeile */
+
+.seitenkopf {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 85px;
+  padding: 0 7%;
+  border-bottom: 1px solid var(--graubeige);
+}
+
+.name {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  padding: 8px 0;
+  font-size: 14px;
+  border-bottom: 1px solid transparent;
+}
+
+nav a:hover {
+  color: var(--kupfer);
+  border-bottom-color: var(--kupfer);
+}
+
+/* Oberer Startbereich */
+
+.startbereich {
+  display: grid;
+  grid-template-columns: 58% 42%;
+  min-height: 650px;
+  border-bottom: 1px solid var(--graubeige);
+}
+
+.starttext {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 10% 80px 12%;
+}
+
+.position {
+  margin: 0 0 25px;
+  color: var(--kupfer);
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(65px, 7vw, 105px);
+  font-weight: normal;
+  line-height: 0.95;
+  letter-spacing: -4px;
+}
+
+.institution {
+  margin: 28px 0 0;
+  color: var(--blaugrau);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 26px;
+}
+
+.schwerpunkte {
+  max-width: 650px;
+  margin: 45px 0 0;
+  padding-top: 25px;
+  border-top: 1px solid var(--graubeige);
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.8;
+}
+
+/* Porträtfoto */
+
+.portraitbereich {
+  min-height: 650px;
+  overflow: hidden;
+  background-color: var(--graubeige);
+}
+
+.portrait {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 650px;
+  object-fit: cover;
+  object-position: 58% center;
+}
+
+/* Inhaltsbereiche */
+
+.inhaltsbereich {
+  display: grid;
+  grid-template-columns: 15% 85%;
+  padding: 110px 9%;
+  border-bottom: 1px solid var(--graubeige);
+}
+
+.bereichsnummer {
+  margin: 12px 0 0;
+  color: var(--kupfer);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+h2 {
+  margin: 0 0 35px;
   color: var(--dunkelblau);
-  border-bottom-color: var(--dunkelblau);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 58px;
+  font-weight: normal;
 }
 
-/* Markierung von ausgewähltem Text */
+.inhaltsbereich div {
+  max-width: 900px;
+}
+
+.inhaltsbereich div p {
+  margin: 0 0 24px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 23px;
+  line-height: 1.65;
+}
+
+/* Textmarkierung */
 
 ::selection {
   background-color: var(--graubeige);
   color: var(--dunkelblau);
 }
 
-/* Darstellung auf Tablets */
+/* Tablets und kleinere Bildschirme */
 
 @media (max-width: 900px) {
-  body {
-    padding: 65px 8%;
+  nav {
+    display: none;
   }
 
-  h1 {
-    font-size: 64px;
+  .startbereich {
+    grid-template-columns: 1fr;
+  }
+
+  .starttext {
+    min-height: 520px;
+    padding: 70px 8%;
+  }
+
+  .portraitbereich,
+  .portrait {
+    min-height: 500px;
+    max-height: 650px;
+  }
+
+  .portrait {
+    object-position: 58% 35%;
+  }
+
+  .inhaltsbereich {
+    grid-template-columns: 1fr;
+    padding: 80px 8%;
+  }
+
+  .bereichsnummer {
+    margin-bottom: 30px;
   }
 }
 
-/* Darstellung auf Smartphones */
+/* Smartphones */
 
 @media (max-width: 600px) {
-  body {
-    padding: 45px 7%;
+  .seitenkopf {
+    min-height: 70px;
+  }
+
+  .starttext {
+    min-height: 460px;
   }
 
   h1 {
-    font-size: 48px;
-    letter-spacing: -1px;
+    font-size: 58px;
+    letter-spacing: -2px;
+  }
+
+  .institution {
+    font-size: 22px;
+  }
+
+  .schwerpunkte {
+    font-size: 14px;
+  }
+
+  .portraitbereich,
+  .portrait {
+    min-height: 390px;
+    max-height: 500px;
   }
 
   h2 {
-    margin-top: 50px;
-    font-size: 34px;
+    font-size: 42px;
   }
 
-  p {
-    font-size: 18px;
-    line-height: 1.6;
-  }
-
-  h1 + p {
-    font-size: 20px;
-  }
-
-  h1 + p + p {
-    font-size: 15px;
-    line-height: 1.6;
+  .inhaltsbereich div p {
+    font-size: 19px;
   }
 }
