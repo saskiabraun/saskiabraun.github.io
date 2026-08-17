@@ -1,0 +1,150 @@
+/* Farbpalette passend zum Porträtfoto */
+
+:root {
+  --dunkelblau: #182536;
+  --creme: #f5f3ef;
+  --graubeige: #d8d1c8;
+  --kupfer: #a85f45;
+  --blaugrau: #73808d;
+}
+
+/* Grundeinstellungen */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Gesamte Website */
+
+body {
+  margin: 0;
+  padding: 80px 10%;
+  background-color: var(--creme);
+  color: var(--dunkelblau);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Name */
+
+h1 {
+  margin: 0 0 25px;
+  max-width: 900px;
+  color: var(--dunkelblau);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 80px;
+  font-weight: normal;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+/* Überschriften */
+
+h2 {
+  margin-top: 70px;
+  margin-bottom: 25px;
+  color: var(--kupfer);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 42px;
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+/* Texte */
+
+p {
+  max-width: 800px;
+  margin-bottom: 24px;
+  font-size: 20px;
+  line-height: 1.7;
+}
+
+/* Der erste Text direkt unter dem Namen */
+
+h1 + p {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: var(--blaugrau);
+  font-size: 23px;
+  font-weight: bold;
+}
+
+/* Forschungsschwerpunkte unter der Position */
+
+h1 + p + p {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid var(--graubeige);
+  border-bottom: 1px solid var(--graubeige);
+  color: var(--kupfer);
+  font-size: 17px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+/* Links */
+
+a {
+  color: var(--kupfer);
+  text-decoration: none;
+  border-bottom: 1px solid var(--kupfer);
+}
+
+a:hover {
+  color: var(--dunkelblau);
+  border-bottom-color: var(--dunkelblau);
+}
+
+/* Markierung von ausgewähltem Text */
+
+::selection {
+  background-color: var(--graubeige);
+  color: var(--dunkelblau);
+}
+
+/* Darstellung auf Tablets */
+
+@media (max-width: 900px) {
+  body {
+    padding: 65px 8%;
+  }
+
+  h1 {
+    font-size: 64px;
+  }
+}
+
+/* Darstellung auf Smartphones */
+
+@media (max-width: 600px) {
+  body {
+    padding: 45px 7%;
+  }
+
+  h1 {
+    font-size: 48px;
+    letter-spacing: -1px;
+  }
+
+  h2 {
+    margin-top: 50px;
+    font-size: 34px;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  h1 + p {
+    font-size: 20px;
+  }
+
+  h1 + p + p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+}
