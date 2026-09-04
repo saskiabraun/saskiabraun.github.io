@@ -331,3 +331,66 @@ h2 {
     font-size: 12px;
   }
 }
+/* Links im Forschungsbereich */
+
+.forschung .textlink {
+  color: var(--kupfer);
+  font-weight: 600;
+  border-bottom: 1px solid var(--kupfer);
+}
+
+.forschung .textlink:hover {
+  color: var(--creme);
+  border-bottom-color: var(--creme);
+}
+
+/* Projektdaten */
+
+.projektdaten {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  max-width: 900px;
+  margin-top: 45px;
+  padding: 30px 0;
+  border-top: 1px solid var(--blaugrau);
+  border-bottom: 1px solid var(--blaugrau);
+}
+
+.projektdaten p {
+  font-size: 16px !important;
+  line-height: 1.7 !important;
+}
+
+.projektdaten strong {
+  color: var(--kupfer);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Link zur offiziellen Projektbeschreibung */
+
+.projektlink {
+  display: inline-block;
+  margin-top: 45px;
+  padding-bottom: 6px;
+  color: var(--creme);
+  font-size: 14px;
+  font-weight: 600;
+  border-bottom: 1px solid var(--kupfer);
+}
+
+.projektlink:hover {
+  color: var(--kupfer);
+}
+
+/* Projektdaten auf Smartphones */
+
+@media (max-width: 600px) {
+  .projektdaten {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
