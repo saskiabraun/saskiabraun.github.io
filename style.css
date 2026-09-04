@@ -394,3 +394,62 @@ h2 {
     gap: 10px;
   }
 }
+/* Sichtbare Links in den Textbereichen */
+
+.inhaltsbereich a {
+  color: var(--kupfer);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.inhaltsbereich a:hover {
+  color: var(--dunkelblau);
+  text-decoration-thickness: 2px;
+}
+
+
+/* Links im dunkelblauen Forschungsbereich */
+
+.forschung a {
+  color: #e49a7f;
+}
+
+.forschung a:hover {
+  color: var(--weiss);
+}
+
+
+/* Deutlich sichtbarer Link zur Projektbeschreibung */
+
+.forschung .projektlink {
+  display: inline-block;
+  margin-top: 45px;
+  padding: 13px 18px;
+  color: var(--dunkelblau);
+  background-color: var(--creme);
+  border: 1px solid var(--creme);
+  text-decoration: none;
+}
+
+.forschung .projektlink:hover {
+  color: var(--weiss);
+  background-color: var(--kupfer);
+  border-color: var(--kupfer);
+}
+
+
+/* Links in der Navigation dauerhaft erkennbar */
+
+nav a {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--graubeige);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: var(--kupfer);
+  border-bottom-color: var(--kupfer);
+}
