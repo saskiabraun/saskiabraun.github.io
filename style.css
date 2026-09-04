@@ -252,3 +252,73 @@ h2 {
     font-size: 19px;
   }
 }
+/* Forschungsbereich */
+
+.forschung {
+  background-color: var(--dunkelblau);
+  color: var(--creme);
+}
+
+.forschung .bereichsnummer {
+  color: var(--kupfer);
+}
+
+.forschung .kategorie {
+  margin: 0 0 20px;
+  color: var(--graubeige);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.forschung h2 {
+  max-width: 950px;
+  color: var(--creme);
+}
+
+.forschung div > p:not(.kategorie) {
+  max-width: 900px;
+  color: var(--creme);
+}
+
+/* Forschungsschwerpunkte */
+
+.forschungsthemen {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  max-width: 900px;
+  margin-top: 45px;
+}
+
+.forschungsthemen span {
+  display: inline-block;
+  padding: 11px 16px;
+  border: 1px solid var(--kupfer);
+  color: var(--creme);
+  font-size: 13px;
+  line-height: 1.2;
+}
+
+/* Hervorhebung beim Darüberfahren */
+
+.forschungsthemen span:hover {
+  background-color: var(--kupfer);
+  color: var(--weiss);
+}
+
+/* Anpassung für Smartphones */
+
+@media (max-width: 600px) {
+  .forschungsthemen {
+    gap: 9px;
+    margin-top: 35px;
+  }
+
+  .forschungsthemen span {
+    padding: 9px 12px;
+    font-size: 12px;
+  }
+}
