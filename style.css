@@ -1,3 +1,5 @@
+@import url("https://fonts.bunny.net/css?family=manrope:400,500,600,700");
+
 /* Farbpalette passend zum Porträtfoto */
 
 :root {
@@ -23,7 +25,8 @@ body {
   margin: 0;
   background-color: var(--creme);
   color: var(--dunkelblau);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Manrope", Arial, sans-serif;
+  font-weight: 400;
 }
 
 /* Links */
@@ -45,9 +48,10 @@ a {
 }
 
 .name {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 24px;
-  font-weight: bold;
+  font-family: "Manrope", Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
 }
 
 nav {
@@ -57,8 +61,9 @@ nav {
 
 nav a {
   padding: 8px 0;
-  font-size: 14px;
   border-bottom: 1px solid transparent;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 nav a:hover {
@@ -86,7 +91,7 @@ nav a:hover {
   margin: 0 0 25px;
   color: var(--kupfer);
   font-size: 13px;
-  font-weight: bold;
+  font-weight: 600;
   letter-spacing: 1.5px;
   line-height: 1.5;
   text-transform: uppercase;
@@ -94,18 +99,20 @@ nav a:hover {
 
 h1 {
   margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Manrope", Arial, sans-serif;
   font-size: clamp(65px, 7vw, 105px);
-  font-weight: normal;
+  font-weight: 500;
   line-height: 0.95;
-  letter-spacing: -4px;
+  letter-spacing: -5px;
 }
 
 .institution {
   margin: 28px 0 0;
   color: var(--blaugrau);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 26px;
+  font-family: "Manrope", Arial, sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  letter-spacing: -0.5px;
 }
 
 .schwerpunkte {
@@ -113,8 +120,8 @@ h1 {
   margin: 45px 0 0;
   padding-top: 25px;
   border-top: 1px solid var(--graubeige);
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 15px;
+  font-weight: 500;
   line-height: 1.8;
 }
 
@@ -148,16 +155,18 @@ h1 {
   margin: 12px 0 0;
   color: var(--kupfer);
   font-size: 12px;
-  font-weight: bold;
+  font-weight: 600;
   letter-spacing: 1px;
 }
 
 h2 {
   margin: 0 0 35px;
   color: var(--dunkelblau);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Manrope", Arial, sans-serif;
   font-size: 58px;
-  font-weight: normal;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -2.5px;
 }
 
 .inhaltsbereich div {
@@ -166,9 +175,11 @@ h2 {
 
 .inhaltsbereich div p {
   margin: 0 0 24px;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 23px;
-  line-height: 1.65;
+  font-family: "Manrope", Arial, sans-serif;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: -0.2px;
 }
 
 /* Textmarkierung */
@@ -176,6 +187,63 @@ h2 {
 ::selection {
   background-color: var(--graubeige);
   color: var(--dunkelblau);
+}
+
+/* Forschungsbereich */
+
+.forschung {
+  background-color: var(--dunkelblau);
+  color: var(--creme);
+}
+
+.forschung .bereichsnummer {
+  color: var(--kupfer);
+}
+
+.forschung .kategorie {
+  margin: 0 0 20px;
+  color: var(--graubeige);
+  font-family: "Manrope", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.forschung h2 {
+  max-width: 950px;
+  color: var(--creme);
+}
+
+.forschung div > p:not(.kategorie) {
+  max-width: 900px;
+  color: var(--creme);
+}
+
+/* Forschungsschwerpunkte */
+
+.forschungsthemen {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  max-width: 900px;
+  margin-top: 45px;
+}
+
+.forschungsthemen span {
+  display: inline-block;
+  padding: 11px 16px;
+  border: 1px solid var(--kupfer);
+  color: var(--creme);
+  font-family: "Manrope", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.forschungsthemen span:hover {
+  background-color: var(--kupfer);
+  color: var(--weiss);
 }
 
 /* Tablets und kleinere Bildschirme */
@@ -226,12 +294,12 @@ h2 {
   }
 
   h1 {
-    font-size: 58px;
-    letter-spacing: -2px;
+    font-size: 56px;
+    letter-spacing: -3px;
   }
 
   .institution {
-    font-size: 22px;
+    font-size: 21px;
   }
 
   .schwerpunkte {
@@ -245,73 +313,14 @@ h2 {
   }
 
   h2 {
-    font-size: 42px;
+    font-size: 40px;
+    letter-spacing: -1.5px;
   }
 
   .inhaltsbereich div p {
-    font-size: 19px;
+    font-size: 18px;
   }
-}
-/* Forschungsbereich */
 
-.forschung {
-  background-color: var(--dunkelblau);
-  color: var(--creme);
-}
-
-.forschung .bereichsnummer {
-  color: var(--kupfer);
-}
-
-.forschung .kategorie {
-  margin: 0 0 20px;
-  color: var(--graubeige);
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
-  font-weight: bold;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-}
-
-.forschung h2 {
-  max-width: 950px;
-  color: var(--creme);
-}
-
-.forschung div > p:not(.kategorie) {
-  max-width: 900px;
-  color: var(--creme);
-}
-
-/* Forschungsschwerpunkte */
-
-.forschungsthemen {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  max-width: 900px;
-  margin-top: 45px;
-}
-
-.forschungsthemen span {
-  display: inline-block;
-  padding: 11px 16px;
-  border: 1px solid var(--kupfer);
-  color: var(--creme);
-  font-size: 13px;
-  line-height: 1.2;
-}
-
-/* Hervorhebung beim Darüberfahren */
-
-.forschungsthemen span:hover {
-  background-color: var(--kupfer);
-  color: var(--weiss);
-}
-
-/* Anpassung für Smartphones */
-
-@media (max-width: 600px) {
   .forschungsthemen {
     gap: 9px;
     margin-top: 35px;
