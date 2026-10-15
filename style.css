@@ -427,62 +427,41 @@ h2 {
   background-color: var(--creme);
 }
 
-.lehre .einleitung {
+.lehre h2 {
+  margin-bottom: 34px;
+}
+
+.lehrinstitution {
+  width: 100%;
   max-width: 900px;
-  margin-bottom: 25px;
+  margin-top: 38px;
 }
 
-.lehrbereiche {
-  max-width: 900px;
-  border-top: 1px solid var(--graubeige);
+.lehrinstitution:first-of-type {
+  margin-top: 0;
 }
 
-.lehrbereich {
-  display: grid;
-  grid-template-columns: 38px 1fr;
-  column-gap: 18px;
-  padding: 20px 0;
-  border-bottom: 1px solid var(--graubeige);
-}
-
-.lehrnummer {
-  grid-column: 1;
-  grid-row: 1 / span 2;
-  margin: 4px 0 0;
-  color: var(--kupfer);
-  font-size: 10px;
-  font-weight: 700;
-}
-
-.lehrbereich h3 {
-  grid-column: 2;
-  margin: 0 0 7px;
+.lehrinstitution h3 {
+  margin: 0 0 18px;
+  padding-bottom: 9px;
   color: var(--dunkelblau);
+  border-bottom: 1px solid var(--graubeige);
   font-size: 18px;
   font-weight: 600;
   line-height: 1.4;
 }
 
-.lehrbereich p:not(.lehrnummer) {
-  grid-column: 2;
+.lehrveranstaltung {
   margin: 0;
+  padding: 0 0 13px;
   color: var(--dunkelblau);
-  font-size: 14px;
-  line-height: 1.7;
+  font-size: 15px;
+  line-height: 1.65;
 }
 
-.lehre .lehre-link {
-  display: inline-block;
-  margin-top: 24px;
-  color: var(--kupfer);
-  font-size: 13px;
-  font-weight: 600;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-
-.lehre .lehre-link:hover {
-  color: var(--dunkelblau);
+.lehrveranstaltung span {
+  color: var(--blaugrau);
+  white-space: nowrap;
 }
 
 
