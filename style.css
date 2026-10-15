@@ -453,3 +453,506 @@ nav a:hover {
   color: var(--kupfer);
   border-bottom-color: var(--kupfer);
 }
+/* Kompakteres Seitenlayout */
+
+.seitenkopf {
+  min-height: 70px;
+}
+
+.startbereich {
+  min-height: 540px;
+}
+
+.starttext {
+  padding: 55px 9%;
+}
+
+.portraitbereich,
+.portrait {
+  min-height: 540px;
+}
+
+.inhaltsbereich {
+  padding: 70px 9%;
+}
+
+h2 {
+  margin-bottom: 24px;
+}
+
+.inhaltsbereich div p {
+  margin-bottom: 18px;
+  line-height: 1.6;
+}
+
+.schwerpunkte {
+  margin-top: 30px;
+  padding-top: 20px;
+}
+
+.forschungsthemen {
+  margin-top: 30px;
+}
+
+.projektdaten {
+  margin-top: 30px;
+  padding: 22px 0;
+}
+
+.forschung .projektlink,
+.lehre .lehre-link {
+  margin-top: 30px;
+}
+
+.lehre .einleitung {
+  margin-bottom: 35px;
+}
+
+.lehrbereich {
+  padding: 25px 0;
+}
+
+
+/* Kompaktere Darstellung auf Tablets */
+
+@media (max-width: 900px) {
+  .starttext {
+    min-height: auto;
+    padding: 55px 8%;
+  }
+
+  .portraitbereich,
+  .portrait {
+    min-height: 440px;
+  }
+
+  .inhaltsbereich {
+    padding: 60px 8%;
+  }
+}
+
+
+/* Kompaktere Darstellung auf Smartphones */
+
+@media (max-width: 600px) {
+  .starttext {
+    min-height: auto;
+    padding: 45px 7%;
+  }
+
+  .portraitbereich,
+  .portrait {
+    min-height: 350px;
+  }
+
+  .inhaltsbereich {
+    padding: 50px 7%;
+  }
+
+  .bereichsnummer {
+    margin-bottom: 18px;
+  }
+
+  .lehrbereich {
+    padding: 22px 0;
+  }
+}/* Kompakteres Seitenlayout */
+
+.seitenkopf {
+  min-height: 70px;
+}
+
+.startbereich {
+  min-height: 540px;
+}
+
+.starttext {
+  padding: 55px 9%;
+}
+
+.portraitbereich,
+.portrait {
+  min-height: 540px;
+}
+
+.inhaltsbereich {
+  padding: 70px 9%;
+}
+
+h2 {
+  margin-bottom: 24px;
+}
+
+.inhaltsbereich div p {
+  margin-bottom: 18px;
+  line-height: 1.6;
+}
+
+.schwerpunkte {
+  margin-top: 30px;
+  padding-top: 20px;
+}
+
+.forschungsthemen {
+  margin-top: 30px;
+}
+
+.projektdaten {
+  margin-top: 30px;
+  padding: 22px 0;
+}
+
+.forschung .projektlink,
+.lehre .lehre-link {
+  margin-top: 30px;
+}
+
+.lehre .einleitung {
+  margin-bottom: 35px;
+}
+
+.lehrbereich {
+  padding: 25px 0;
+}
+
+
+/* Kompaktere Darstellung auf Tablets */
+
+@media (max-width: 900px) {
+  .starttext {
+    min-height: auto;
+    padding: 55px 8%;
+  }
+
+  .portraitbereich,
+  .portrait {
+    min-height: 440px;
+  }
+
+  .inhaltsbereich {
+    padding: 60px 8%;
+  }
+}
+
+
+/* Kompaktere Darstellung auf Smartphones */
+
+@media (max-width: 600px) {
+  .starttext {
+    min-height: auto;
+    padding: 45px 7%;
+  }
+
+  .portraitbereich,
+  .portrait {
+    min-height: 350px;
+  }
+
+  .inhaltsbereich {
+    padding: 50px 7%;
+  }
+
+  .bereichsnummer {
+    margin-bottom: 18px;
+  }
+
+  .lehrbereich {
+    padding: 22px 0;
+  }
+/* Kompakteres Seitenlayout */
+
+.seitenkopf {
+  min-height: 70px;
+}
+
+.startbereich {
+  min-height: 540px;
+}
+
+.starttext {
+  padding: 55px 9%;
+}
+
+.portraitbereich,
+.portrait {
+  min-height: 540px;
+}
+
+.inhaltsbereich {
+  padding: 70px 9%;
+}
+
+h2 {
+  margin-bottom: 24px;
+}
+
+.inhaltsbereich div p {
+  margin-bottom: 18px;
+  line-height: 1.6;
+}
+
+.schwerpunkte {
+  margin-top: 30px;
+  padding-top: 20px;
+}
+
+.forschungsthemen {
+  margin-top: 30px;
+}
+
+.projektdaten {
+  margin-top: 30px;
+  padding: 22px 0;
+}
+
+.forschung .projektlink,
+.lehre .lehre-link {
+  margin-top: 30px;
+}
+
+.lehre .einleitung {
+  margin-bottom: 35px;
+}
+
+.lehrbereich {
+  padding: 25px 0;
+}
+
+
+/* Kompaktere Darstellung auf Tablets */
+
+@media (max-width: 900px) {
+  .starttext {
+    min-height: auto;
+    padding: 55px 8%;
+  }
+
+  .portraitbereich,
+  .portrait {
+    min-height: 440px;
+  }
+
+  .inhaltsbereich {
+    padding: 60px 8%;
+  }
+}
+
+
+/* Kompaktere Darstellung auf Smartphones */
+
+@media (max-width: 600px) {
+  .starttext {
+    min-height: auto;
+    padding: 45px 7%;
+  }
+
+  .portraitbereich,
+  .portrait {
+    min-height: 350px;
+  }
+
+  .inhaltsbereich {
+    padding: 50px 7%;
+  }
+
+  .bereichsnummer {
+    margin-bottom: 18px;
+  }
+
+  .lehrbereich {
+    padding: 22px 0;
+  }
+} min-height: 540px;
+}
+
+.starttext {
+  padding: 55px 9%;
+}
+
+.portraitbereich,
+.portrait {
+  min-height: 540px;
+}
+
+.inhaltsbereich {
+  padding: 70px 9%;
+}
+
+h2 {
+  margin-bottom: 24px;
+}
+
+.inhaltsbereich div p {
+  margin-bottom: 18px;
+  line-height: 1.6;
+}
+
+.schwerpunkte {
+  margin-top: 30px;
+  padding-top: 20px;
+}
+
+.forschungsthemen {
+  margin-top: 30px;
+}
+
+.projektdaten {
+  margin-top: 30px;
+  padding: 22px 0;
+}
+
+.forschung .projektlink,
+.lehre .lehre-link {
+  margin-top: 30px;
+}
+
+.lehre .einleitung {
+  margin-bottom: 35px;
+}
+
+.lehrbereich {
+  padding: 25px 0;
+}
+
+
+/* Kompaktere Darstellung auf Tablets */
+
+@media (max-width: 900px) {
+  .starttext {
+    min-height: auto;
+    padding: 55px 8%;
+  }
+
+  .portraitbereich,
+  .portrait {
+    min-height: 440px;
+  }
+
+  .inhaltsbereich {
+    padding: 60px 8%;
+  }
+}
+
+
+/* Kompaktere Darstellung auf Smartphones */
+
+@media (max-width: 600px) {
+  .starttext {
+    min-height: auto;
+    padding: 45px 7%;
+  }
+
+  .portraitbereich,
+  .portrait {
+    min-height: 350px;
+  }
+
+  .inhaltsbereich {
+    padding: 50px 7%;
+  }
+
+  .bereichsnummer {
+    margin-bottom: 18px;
+  }
+
+  .lehrbereich {
+    padding: 22px 0;
+  }
+}
+ min-height: 540px;
+}
+
+.starttext {
+  padding: 55px 9%;
+}
+
+.portraitbereich,
+.portrait {
+  min-height: 540px;
+}
+
+.inhaltsbereich {
+  padding: 70px 9%;
+}
+
+h2 {
+  margin-bottom: 24px;
+}
+
+.inhaltsbereich div p {
+  margin-bottom: 18px;
+  line-height: 1.6;
+}
+
+.schwerpunkte {
+  margin-top: 30px;
+  padding-top: 20px;
+}
+
+.forschungsthemen {
+  margin-top: 30px;
+}
+
+.projektdaten {
+  margin-top: 30px;
+  padding: 22px 0;
+}
+
+.forschung .projektlink,
+.lehre .lehre-link {
+  margin-top: 30px;
+}
+
+.lehre .einleitung {
+  margin-bottom: 35px;
+}
+
+.lehrbereich {
+  padding: 25px 0;
+}
+
+
+/* Kompaktere Darstellung auf Tablets */
+
+@media (max-width: 900px) {
+  .starttext {
+    min-height: auto;
+    padding: 55px 8%;
+  }
+
+  .portraitbereich,
+  .portrait {
+    min-height: 440px;
+  }
+
+  .inhaltsbereich {
+    padding: 60px 8%;
+  }
+}
+
+
+/* Kompaktere Darstellung auf Smartphones */
+
+@media (max-width: 600px) {
+  .starttext {
+    min-height: auto;
+    padding: 45px 7%;
+  }
+
+  .portraitbereich,
+  .portrait {
+    min-height: 350px;
+  }
+
+  .inhaltsbereich {
+    padding: 50px 7%;
+  }
+
+  .bereichsnummer {
+    margin-bottom: 18px;
+  }
+
+  .lehrbereich {
+    padding: 22px 0;
+  }
+}
