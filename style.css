@@ -1,6 +1,9 @@
 @import url("https://fonts.bunny.net/css?family=manrope:400,500,600,700");
 
-/* Farbpalette passend zum Porträtfoto */
+
+/* ==================================================
+   FARBEN
+   ================================================== */
 
 :root {
   --dunkelblau: #182536;
@@ -11,7 +14,10 @@
   --weiss: #ffffff;
 }
 
-/* Grundeinstellungen */
+
+/* ==================================================
+   GRUNDEINSTELLUNGEN
+   ================================================== */
 
 * {
   box-sizing: border-box;
@@ -29,39 +35,44 @@ body {
   font-weight: 400;
 }
 
-/* Links */
-
 a {
   color: inherit;
   text-decoration: none;
 }
 
-/* Kopfzeile */
+::selection {
+  background-color: var(--graubeige);
+  color: var(--dunkelblau);
+}
+
+
+/* ==================================================
+   KOPFZEILE UND NAVIGATION
+   ================================================== */
 
 .seitenkopf {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 85px;
+  min-height: 70px;
   padding: 0 7%;
   border-bottom: 1px solid var(--graubeige);
 }
 
 .name {
-  font-family: "Manrope", Arial, sans-serif;
-  font-size: 22px;
+  font-size: 21px;
   font-weight: 600;
   letter-spacing: -0.5px;
 }
 
 nav {
   display: flex;
-  gap: 30px;
+  gap: 28px;
 }
 
 nav a {
   padding: 8px 0;
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid var(--graubeige);
   font-size: 14px;
   font-weight: 500;
 }
@@ -71,12 +82,15 @@ nav a:hover {
   border-bottom-color: var(--kupfer);
 }
 
-/* Oberer Startbereich */
+
+/* ==================================================
+   STARTBEREICH
+   ================================================== */
 
 .startbereich {
   display: grid;
-  grid-template-columns: 58% 42%;
-  min-height: 650px;
+  grid-template-columns: minmax(0, 58%) minmax(360px, 42%);
+  min-height: 540px;
   border-bottom: 1px solid var(--graubeige);
 }
 
@@ -84,22 +98,21 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 80px 10% 80px 12%;
+  padding: 55px 9%;
 }
 
 .position {
-  margin: 0 0 25px;
+  margin: 0 0 22px;
   color: var(--kupfer);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
-  letter-spacing: 1.5px;
   line-height: 1.5;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
 }
 
 h1 {
   margin: 0;
-  font-family: "Manrope", Arial, sans-serif;
   font-size: clamp(48px, 5.5vw, 78px);
   font-weight: 500;
   line-height: 1;
@@ -107,28 +120,30 @@ h1 {
 }
 
 .institution {
-  margin: 28px 0 0;
+  margin: 24px 0 0;
   color: var(--blaugrau);
-  font-family: "Manrope", Arial, sans-serif;
-  font-size: 25px;
+  font-size: 23px;
   font-weight: 400;
   letter-spacing: -0.5px;
 }
 
 .schwerpunkte {
   max-width: 650px;
-  margin: 45px 0 0;
-  padding-top: 25px;
+  margin: 30px 0 0;
+  padding-top: 20px;
   border-top: 1px solid var(--graubeige);
   font-size: 15px;
   font-weight: 500;
   line-height: 1.8;
 }
 
-/* Porträtfoto */
+
+/* ==================================================
+   PORTRÄTFOTO
+   ================================================== */
 
 .portraitbereich {
-  min-height: 650px;
+  min-height: 540px;
   overflow: hidden;
   background-color: var(--graubeige);
 }
@@ -137,264 +152,68 @@ h1 {
   display: block;
   width: 100%;
   height: 100%;
-  min-height: 650px;
+  min-height: 540px;
   object-fit: cover;
   object-position: 58% center;
 }
 
-/* Inhaltsbereiche */
+
+/* ==================================================
+   ALLGEMEINE INHALTSBEREICHE
+   ================================================== */
 
 .inhaltsbereich {
   display: grid;
-  grid-template-columns: 15% 85%;
-  padding: 110px 9%;
+  grid-template-columns: 55px minmax(0, 900px);
+  justify-content: center;
+  column-gap: 35px;
+  padding: 68px 8%;
   border-bottom: 1px solid var(--graubeige);
 }
 
+.inhaltsbereich > div {
+  width: 100%;
+  max-width: 900px;
+}
+
 .bereichsnummer {
-  margin: 12px 0 0;
+  margin: 9px 0 0;
   color: var(--kupfer);
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 1px;
 }
 
-h2 {
-  margin: 0 0 30px;
-  color: var(--dunkelblau);
-  font-family: "Manrope", Arial, sans-serif;
-  font-size: 44px;
-  font-weight: 500;
-  line-height: 1.15;
-  letter-spacing: -1.5px;
-}
-
-.inhaltsbereich div {
-  max-width: 900px;
-}
-
-.inhaltsbereich div p {
-  margin: 0 0 24px;
-  font-family: "Manrope", Arial, sans-serif;
-  font-size: 21px;
-  font-weight: 400;
-  line-height: 1.7;
-  letter-spacing: -0.2px;
-}
-
-/* Textmarkierung */
-
-::selection {
-  background-color: var(--graubeige);
-  color: var(--dunkelblau);
-}
-
-/* Forschungsbereich */
-
-.forschung {
-  background-color: var(--dunkelblau);
-  color: var(--creme);
-}
-
-.forschung .bereichsnummer {
+.kategorie {
+  margin: 0 0 16px;
   color: var(--kupfer);
-}
-
-.forschung .kategorie {
-  margin: 0 0 20px;
-  color: var(--graubeige);
-  font-family: "Manrope", Arial, sans-serif;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 1.5px;
   text-transform: uppercase;
 }
 
-.forschung h2 {
-  max-width: 950px;
-  color: var(--creme);
-}
-
-.forschung div > p:not(.kategorie) {
-  max-width: 900px;
-  color: var(--creme);
-}
-
-/* Forschungsschwerpunkte */
-
-.forschungsthemen {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  max-width: 900px;
-  margin-top: 45px;
-}
-
-.forschungsthemen span {
-  display: inline-block;
-  padding: 11px 16px;
-  border: 1px solid var(--kupfer);
-  color: var(--creme);
-  font-family: "Manrope", Arial, sans-serif;
-  font-size: 13px;
+h2 {
+  margin: 0 0 24px;
+  color: var(--dunkelblau);
+  font-size: 44px;
   font-weight: 500;
-  line-height: 1.2;
+  line-height: 1.15;
+  letter-spacing: -1.5px;
 }
 
-.forschungsthemen span:hover {
-  background-color: var(--kupfer);
-  color: var(--weiss);
+.inhaltsbereich > div > p:not(.kategorie) {
+  max-width: 850px;
+  margin: 0 0 18px;
+  font-size: 19px;
+  line-height: 1.65;
+  letter-spacing: -0.2px;
 }
 
-/* Tablets und kleinere Bildschirme */
 
-@media (max-width: 900px) {
-  nav {
-    display: none;
-  }
-
-  .startbereich {
-    grid-template-columns: 1fr;
-  }
-
-  .starttext {
-    min-height: 520px;
-    padding: 70px 8%;
-  }
-
-  .portraitbereich,
-  .portrait {
-    min-height: 500px;
-    max-height: 650px;
-  }
-
-  .portrait {
-    object-position: 58% 35%;
-  }
-
-  .inhaltsbereich {
-    grid-template-columns: 1fr;
-    padding: 80px 8%;
-  }
-
-  .bereichsnummer {
-    margin-bottom: 30px;
-  }
-}
-
-/* Smartphones */
-
-@media (max-width: 600px) {
-  .seitenkopf {
-    min-height: 70px;
-  }
-
-  .starttext {
-    min-height: 460px;
-  }
-
-  h1 {
-    font-size: 42px;
-    letter-spacing: -3px;
-  }
-
-  .institution {
-    font-size: 21px;
-  }
-
-  .schwerpunkte {
-    font-size: 14px;
-  }
-
-  .portraitbereich,
-  .portrait {
-    min-height: 390px;
-    max-height: 500px;
-  }
-
-  h2 {
-    font-size: 32px;
-    letter-spacing: -1px;
-  }
-
-  .inhaltsbereich div p {
-    font-size: 18px;
-  }
-
-  .forschungsthemen {
-    gap: 9px;
-    margin-top: 35px;
-  }
-
-  .forschungsthemen span {
-    padding: 9px 12px;
-    font-size: 12px;
-  }
-}
-/* Links im Forschungsbereich */
-
-.forschung .textlink {
-  color: var(--kupfer);
-  font-weight: 600;
-  border-bottom: 1px solid var(--kupfer);
-}
-
-.forschung .textlink:hover {
-  color: var(--creme);
-  border-bottom-color: var(--creme);
-}
-
-/* Projektdaten */
-
-.projektdaten {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 40px;
-  max-width: 900px;
-  margin-top: 45px;
-  padding: 30px 0;
-  border-top: 1px solid var(--blaugrau);
-  border-bottom: 1px solid var(--blaugrau);
-}
-
-.projektdaten p {
-  font-size: 16px !important;
-  line-height: 1.7 !important;
-}
-
-.projektdaten strong {
-  color: var(--kupfer);
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-/* Link zur offiziellen Projektbeschreibung */
-
-.projektlink {
-  display: inline-block;
-  margin-top: 45px;
-  padding-bottom: 6px;
-  color: var(--creme);
-  font-size: 14px;
-  font-weight: 600;
-  border-bottom: 1px solid var(--kupfer);
-}
-
-.projektlink:hover {
-  color: var(--kupfer);
-}
-
-/* Projektdaten auf Smartphones */
-
-@media (max-width: 600px) {
-  .projektdaten {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-}
-/* Sichtbare Links in den Textbereichen */
+/* ==================================================
+   SICHTBARE LINKS
+   ================================================== */
 
 .inhaltsbereich a {
   color: var(--kupfer);
@@ -410,7 +229,31 @@ h2 {
 }
 
 
-/* Links im dunkelblauen Forschungsbereich */
+/* ==================================================
+   FORSCHUNG
+   ================================================== */
+
+.forschung {
+  background-color: var(--dunkelblau);
+  color: var(--creme);
+}
+
+.forschung .bereichsnummer {
+  color: #e49a7f;
+}
+
+.forschung .kategorie {
+  color: var(--graubeige);
+}
+
+.forschung h2 {
+  max-width: 850px;
+  color: var(--creme);
+}
+
+.forschung > div > p:not(.kategorie) {
+  color: var(--creme);
+}
 
 .forschung a {
   color: #e49a7f;
@@ -421,15 +264,72 @@ h2 {
 }
 
 
-/* Deutlich sichtbarer Link zur Projektbeschreibung */
+/* Projektdaten */
+
+.projektdaten {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 35px;
+  max-width: 850px;
+  margin-top: 30px;
+  padding: 22px 0;
+  border-top: 1px solid var(--blaugrau);
+  border-bottom: 1px solid var(--blaugrau);
+}
+
+.projektdaten p {
+  margin: 0;
+  color: var(--creme);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.projektdaten strong {
+  color: #e49a7f;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+
+/* Forschungsschwerpunkte */
+
+.forschungsthemen {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 850px;
+  margin-top: 30px;
+}
+
+.forschungsthemen span {
+  display: inline-block;
+  padding: 9px 14px;
+  border: 1px solid var(--kupfer);
+  color: var(--creme);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.forschungsthemen span:hover {
+  background-color: var(--kupfer);
+  color: var(--weiss);
+}
+
+
+/* Link zur Projektbeschreibung */
 
 .forschung .projektlink {
   display: inline-block;
-  margin-top: 45px;
-  padding: 13px 18px;
+  margin-top: 30px;
+  padding: 12px 17px;
   color: var(--dunkelblau);
   background-color: var(--creme);
   border: 1px solid var(--creme);
+  font-size: 13px;
+  font-weight: 600;
   text-decoration: none;
 }
 
@@ -440,575 +340,179 @@ h2 {
 }
 
 
-/* Links in der Navigation dauerhaft erkennbar */
-
-nav a {
-  padding: 8px 0;
-  border-bottom: 1px solid var(--graubeige);
-  font-size: 14px;
-  font-weight: 500;
-}
-
-nav a:hover {
-  color: var(--kupfer);
-  border-bottom-color: var(--kupfer);
-}
-/* Kompakteres Seitenlayout */
-
-.seitenkopf {
-  min-height: 70px;
-}
-
-.startbereich {
-  min-height: 540px;
-}
-
-.starttext {
-  padding: 55px 9%;
-}
-
-.portraitbereich,
-.portrait {
-  min-height: 540px;
-}
-
-.inhaltsbereich {
-  padding: 70px 9%;
-}
-
-h2 {
-  margin-bottom: 24px;
-}
-
-.inhaltsbereich div p {
-  margin-bottom: 18px;
-  line-height: 1.6;
-}
-
-.schwerpunkte {
-  margin-top: 30px;
-  padding-top: 20px;
-}
-
-.forschungsthemen {
-  margin-top: 30px;
-}
-
-.projektdaten {
-  margin-top: 30px;
-  padding: 22px 0;
-}
-
-.forschung .projektlink,
-.lehre .lehre-link {
-  margin-top: 30px;
-}
-
-.lehre .einleitung {
-  margin-bottom: 35px;
-}
-
-.lehrbereich {
-  padding: 25px 0;
-}
-
-
-/* Kompaktere Darstellung auf Tablets */
-
-@media (max-width: 900px) {
-  .starttext {
-    min-height: auto;
-    padding: 55px 8%;
-  }
-
-  .portraitbereich,
-  .portrait {
-    min-height: 440px;
-  }
-
-  .inhaltsbereich {
-    padding: 60px 8%;
-  }
-}
-
-
-/* Kompaktere Darstellung auf Smartphones */
-
-@media (max-width: 600px) {
-  .starttext {
-    min-height: auto;
-    padding: 45px 7%;
-  }
-
-  .portraitbereich,
-  .portrait {
-    min-height: 350px;
-  }
-
-  .inhaltsbereich {
-    padding: 50px 7%;
-  }
-
-  .bereichsnummer {
-    margin-bottom: 18px;
-  }
-
-  .lehrbereich {
-    padding: 22px 0;
-  }
-}/* Kompakteres Seitenlayout */
-
-.seitenkopf {
-  min-height: 70px;
-}
-
-.startbereich {
-  min-height: 540px;
-}
-
-.starttext {
-  padding: 55px 9%;
-}
-
-.portraitbereich,
-.portrait {
-  min-height: 540px;
-}
-
-.inhaltsbereich {
-  padding: 70px 9%;
-}
-
-h2 {
-  margin-bottom: 24px;
-}
-
-.inhaltsbereich div p {
-  margin-bottom: 18px;
-  line-height: 1.6;
-}
-
-.schwerpunkte {
-  margin-top: 30px;
-  padding-top: 20px;
-}
-
-.forschungsthemen {
-  margin-top: 30px;
-}
-
-.projektdaten {
-  margin-top: 30px;
-  padding: 22px 0;
-}
-
-.forschung .projektlink,
-.lehre .lehre-link {
-  margin-top: 30px;
-}
-
-.lehre .einleitung {
-  margin-bottom: 35px;
-}
-
-.lehrbereich {
-  padding: 25px 0;
-}
-
-
-/* Kompaktere Darstellung auf Tablets */
-
-@media (max-width: 900px) {
-  .starttext {
-    min-height: auto;
-    padding: 55px 8%;
-  }
-
-  .portraitbereich,
-  .portrait {
-    min-height: 440px;
-  }
-
-  .inhaltsbereich {
-    padding: 60px 8%;
-  }
-}
-
-
-/* Kompaktere Darstellung auf Smartphones */
-
-@media (max-width: 600px) {
-  .starttext {
-    min-height: auto;
-    padding: 45px 7%;
-  }
-
-  .portraitbereich,
-  .portrait {
-    min-height: 350px;
-  }
-
-  .inhaltsbereich {
-    padding: 50px 7%;
-  }
-
-  .bereichsnummer {
-    margin-bottom: 18px;
-  }
-
-  .lehrbereich {
-    padding: 22px 0;
-  }
-/* Kompakteres Seitenlayout */
-
-.seitenkopf {
-  min-height: 70px;
-}
-
-.startbereich {
-  min-height: 540px;
-}
-
-.starttext {
-  padding: 55px 9%;
-}
-
-.portraitbereich,
-.portrait {
-  min-height: 540px;
-}
-
-.inhaltsbereich {
-  padding: 70px 9%;
-}
-
-h2 {
-  margin-bottom: 24px;
-}
-
-.inhaltsbereich div p {
-  margin-bottom: 18px;
-  line-height: 1.6;
-}
-
-.schwerpunkte {
-  margin-top: 30px;
-  padding-top: 20px;
-}
-
-.forschungsthemen {
-  margin-top: 30px;
-}
-
-.projektdaten {
-  margin-top: 30px;
-  padding: 22px 0;
-}
-
-.forschung .projektlink,
-.lehre .lehre-link {
-  margin-top: 30px;
-}
-
-.lehre .einleitung {
-  margin-bottom: 35px;
-}
-
-.lehrbereich {
-  padding: 25px 0;
-}
-
-
-/* Kompaktere Darstellung auf Tablets */
-
-@media (max-width: 900px) {
-  .starttext {
-    min-height: auto;
-    padding: 55px 8%;
-  }
-
-  .portraitbereich,
-  .portrait {
-    min-height: 440px;
-  }
-
-  .inhaltsbereich {
-    padding: 60px 8%;
-  }
-}
-
-
-/* Kompaktere Darstellung auf Smartphones */
-
-@media (max-width: 600px) {
-  .starttext {
-    min-height: auto;
-    padding: 45px 7%;
-  }
-
-  .portraitbereich,
-  .portrait {
-    min-height: 350px;
-  }
-
-  .inhaltsbereich {
-    padding: 50px 7%;
-  }
-
-  .bereichsnummer {
-    margin-bottom: 18px;
-  }
-
-  .lehrbereich {
-    padding: 22px 0;
-  }
-} min-height: 540px;
-}
-
-.starttext {
-  padding: 55px 9%;
-}
-
-.portraitbereich,
-.portrait {
-  min-height: 540px;
-}
-
-.inhaltsbereich {
-  padding: 70px 9%;
-}
-
-h2 {
-  margin-bottom: 24px;
-}
-
-.inhaltsbereich div p {
-  margin-bottom: 18px;
-  line-height: 1.6;
-}
-
-.schwerpunkte {
-  margin-top: 30px;
-  padding-top: 20px;
-}
-
-.forschungsthemen {
-  margin-top: 30px;
-}
-
-.projektdaten {
-  margin-top: 30px;
-  padding: 22px 0;
-}
-
-.forschung .projektlink,
-.lehre .lehre-link {
-  margin-top: 30px;
-}
-
-.lehre .einleitung {
-  margin-bottom: 35px;
-}
-
-.lehrbereich {
-  padding: 25px 0;
-}
-
-
-/* Kompaktere Darstellung auf Tablets */
-
-@media (max-width: 900px) {
-  .starttext {
-    min-height: auto;
-    padding: 55px 8%;
-  }
-
-  .portraitbereich,
-  .portrait {
-    min-height: 440px;
-  }
-
-  .inhaltsbereich {
-    padding: 60px 8%;
-  }
-}
-
-
-/* Kompaktere Darstellung auf Smartphones */
-
-@media (max-width: 600px) {
-  .starttext {
-    min-height: auto;
-    padding: 45px 7%;
-  }
-
-  .portraitbereich,
-  .portrait {
-    min-height: 350px;
-  }
-
-  .inhaltsbereich {
-    padding: 50px 7%;
-  }
-
-  .bereichsnummer {
-    margin-bottom: 18px;
-  }
-
-  .lehrbereich {
-    padding: 22px 0;
-  }
-}
- min-height: 540px;
-}
-
-.starttext {
-  padding: 55px 9%;
-}
-
-.portraitbereich,
-.portrait {
-  min-height: 540px;
-}
-
-.inhaltsbereich {
-  padding: 70px 9%;
-}
-
-h2 {
-  margin-bottom: 24px;
-}
-
-.inhaltsbereich div p {
-  margin-bottom: 18px;
-  line-height: 1.6;
-}
-
-.schwerpunkte {
-  margin-top: 30px;
-  padding-top: 20px;
-}
-
-.forschungsthemen {
-  margin-top: 30px;
-}
-
-.projektdaten {
-  margin-top: 30px;
-  padding: 22px 0;
-}
-
-.forschung .projektlink,
-.lehre .lehre-link {
-  margin-top: 30px;
-}
-
-.lehre .einleitung {
-  margin-bottom: 35px;
-}
-
-.lehrbereich {
-  padding: 25px 0;
-}
-
-
-/* Kompaktere Darstellung auf Tablets */
-
-@media (max-width: 900px) {
-  .starttext {
-    min-height: auto;
-    padding: 55px 8%;
-  }
-
-  .portraitbereich,
-  .portrait {
-    min-height: 440px;
-  }
-
-  .inhaltsbereich {
-    padding: 60px 8%;
-  }
-}
-
-
-/* Kompaktere Darstellung auf Smartphones */
-
-@media (max-width: 600px) {
-  .starttext {
-    min-height: auto;
-    padding: 45px 7%;
-  }
-
-  .portraitbereich,
-  .portrait {
-    min-height: 350px;
-  }
-
-  .inhaltsbereich {
-    padding: 50px 7%;
-  }
-
-  .bereichsnummer {
-    margin-bottom: 18px;
-  }
-
-  .lehrbereich {
-    padding: 22px 0;
-  }
-}
-/* Mittig platzierter Vortragsbereich */
+/* ==================================================
+   VORTRÄGE UND WORKSHOPS
+   ================================================== */
 
 .vortraege {
+  background-color: var(--weiss);
   grid-template-columns: 55px minmax(0, 820px);
-  justify-content: center;
-  column-gap: 35px;
 }
 
 .vortraege > div {
-  width: 100%;
   max-width: 820px;
 }
 
 .vortraege h2 {
-  margin-bottom: 35px;
+  margin-bottom: 28px;
 }
+
+
+/* Schmale, mittig platzierte Vortragsliste */
 
 .vortragsgruppe {
   width: 100%;
-  max-width: 760px;
-  margin: 45px auto 0;
+  max-width: 720px;
+  margin: 40px auto 0;
 }
 
 .vortragsgruppe h3 {
-  margin: 0 0 24px;
+  margin: 0 0 22px;
   padding-bottom: 10px;
+  color: var(--dunkelblau);
   border-bottom: 1px solid var(--graubeige);
   font-size: 21px;
   font-weight: 600;
-  text-align: left;
+  line-height: 1.3;
 }
 
 .vortragsgruppe .vortragseintrag {
   width: 100%;
-  max-width: 720px;
-  margin: 0 auto 22px;
+  margin: 0 0 20px;
+  color: var(--dunkelblau);
   font-size: 16px;
   line-height: 1.75;
   text-align: left;
 }
 
+.vortragseintrag strong {
+  font-weight: 700;
+}
 
-/* Tablets */
+.vortragseintrag a {
+  color: var(--kupfer);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.vortragseintrag a:hover {
+  color: var(--dunkelblau);
+  text-decoration-thickness: 2px;
+}
+
+
+/* ==================================================
+   LEHRE
+   ================================================== */
+
+.lehre {
+  background-color: var(--creme);
+}
+
+.lehre .einleitung {
+  max-width: 800px;
+  margin-bottom: 32px;
+}
+
+.lehrbereiche {
+  max-width: 850px;
+  border-top: 1px solid var(--graubeige);
+}
+
+.lehrbereich {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  column-gap: 22px;
+  padding: 25px 0;
+  border-bottom: 1px solid var(--graubeige);
+}
+
+.lehrnummer {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  margin: 4px 0 0;
+  color: var(--kupfer);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.lehrbereich h3 {
+  grid-column: 2;
+  margin: 0 0 10px;
+  color: var(--dunkelblau);
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.4px;
+}
+
+.lehrbereich p:not(.lehrnummer) {
+  grid-column: 2;
+  margin: 0;
+  color: var(--dunkelblau);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.lehre .lehre-link {
+  display: inline-block;
+  margin-top: 30px;
+  color: var(--kupfer);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.lehre .lehre-link:hover {
+  color: var(--dunkelblau);
+}
+
+
+/* ==================================================
+   TABLETS
+   ================================================== */
 
 @media (max-width: 900px) {
-  .vortraege {
-    display: block;
-    padding-right: 10%;
-    padding-left: 10%;
+  nav {
+    display: none;
   }
 
-  .vortraege .bereichsnummer {
-    margin-bottom: 22px;
+  .startbereich {
+    grid-template-columns: 1fr;
+  }
+
+  .starttext {
+    min-height: auto;
+    padding: 55px 8%;
+  }
+
+  .portraitbereich,
+  .portrait {
+    min-height: 440px;
+    max-height: 600px;
+  }
+
+  .portrait {
+    object-position: 58% 35%;
+  }
+
+  .inhaltsbereich,
+  .vortraege {
+    display: block;
+    padding: 58px 9%;
+  }
+
+  .bereichsnummer {
+    margin: 0 0 20px;
+  }
+
+  .inhaltsbereich > div,
+  .vortraege > div {
+    max-width: 760px;
+    margin: 0 auto;
   }
 
   .vortragsgruppe {
@@ -1017,21 +521,98 @@ h2 {
 }
 
 
-/* Smartphones */
+/* ==================================================
+   SMARTPHONES
+   ================================================== */
 
 @media (max-width: 600px) {
+  .seitenkopf {
+    min-height: 65px;
+    padding: 0 6%;
+  }
+
+  .name {
+    font-size: 19px;
+  }
+
+  .starttext {
+    padding: 42px 7%;
+  }
+
+  h1 {
+    font-size: 42px;
+    letter-spacing: -2px;
+  }
+
+  .institution {
+    margin-top: 18px;
+    font-size: 20px;
+  }
+
+  .schwerpunkte {
+    margin-top: 24px;
+    font-size: 14px;
+  }
+
+  .portraitbereich,
+  .portrait {
+    min-height: 350px;
+    max-height: 480px;
+  }
+
+  .inhaltsbereich,
   .vortraege {
-    padding-right: 7%;
-    padding-left: 7%;
+    padding: 48px 7%;
+  }
+
+  h2 {
+    font-size: 32px;
+    letter-spacing: -1px;
+  }
+
+  .inhaltsbereich > div > p:not(.kategorie) {
+    font-size: 17px;
+  }
+
+  .projektdaten {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .forschungsthemen {
+    gap: 8px;
+  }
+
+  .forschungsthemen span {
+    padding: 8px 11px;
+    font-size: 11px;
   }
 
   .vortragsgruppe {
-    margin-top: 35px;
+    margin-top: 32px;
+  }
+
+  .vortragsgruppe h3 {
+    font-size: 19px;
   }
 
   .vortragsgruppe .vortragseintrag {
-    margin-bottom: 19px;
+    margin-bottom: 18px;
     font-size: 15px;
     line-height: 1.7;
+  }
+
+  .lehrbereich {
+    grid-template-columns: 35px 1fr;
+    column-gap: 12px;
+    padding: 22px 0;
+  }
+
+  .lehrbereich h3 {
+    font-size: 19px;
+  }
+
+  .lehrbereich p:not(.lehrnummer) {
+    font-size: 14px;
   }
 }
