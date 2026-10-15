@@ -956,3 +956,73 @@ h2 {
     padding: 22px 0;
   }
 }
+/* Zusätzliche Angaben bei Vorträgen */
+
+.vortragsinformationen .mitautorinnen {
+  margin: 0 0 10px;
+  color: var(--blaugrau);
+  font-size: 14px;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.vortragsinformationen .veranstaltungsdetails {
+  margin: 4px 0 0;
+  color: var(--blaugrau);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.vortragsinformationen .veranstaltung a {
+  color: var(--kupfer);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.vortragsinformationen .veranstaltung a:hover {
+  color: var(--dunkelblau);
+  text-decoration-thickness: 2px;
+}
+/* Outreach und Wissenstransfer */
+
+.outreach-bereich {
+  max-width: 950px;
+  margin-top: 65px;
+}
+
+.outreach-bereich .kategorie {
+  margin-bottom: 14px;
+}
+
+.outreach-ueberschrift {
+  margin: 0 0 15px;
+  color: var(--dunkelblau);
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -1px;
+}
+
+.outreach-einleitung {
+  max-width: 750px;
+  margin-bottom: 30px !important;
+  color: var(--blaugrau);
+  font-size: 17px !important;
+  line-height: 1.6 !important;
+}
+
+@media (max-width: 600px) {
+  .outreach-bereich {
+    margin-top: 45px;
+  }
+
+  .outreach-ueberschrift {
+    font-size: 24px;
+  }
+
+  .outreach-einleitung {
+    font-size: 15px !important;
+  }
+}
